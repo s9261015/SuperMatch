@@ -1,0 +1,12 @@
+.main-header .header-padding {
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+}
+
+.main-header .header-path {
+	padding-left: 7.5px;
+}
+
+.main-header .header-path .active {
+    color: #007bff;
+}
