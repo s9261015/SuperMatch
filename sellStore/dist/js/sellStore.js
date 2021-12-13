@@ -1,4 +1,4 @@
-"use strict" 
+"use strict"
 
 var ss = this;
 ss.gDfrd = $.Deferred();

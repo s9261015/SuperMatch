@@ -1,34 +1,48 @@
-"use strict" 
+"use strict"
 
-mainSidebar.off('updatePath').on('updatePath', function(e, taregetPath){
-    $('[data-path="' + taregetPath + '"]').each(function () {
-        activeSideNode(this);
+var sideBarM = {};
+
+mainSidebar.load("pages/sidebar.html", function() {
+    sideBarM.load();
+    sideBarDfrd.resolve();
+});
+
+sideBarM.load = function () {
+    sideBarM.updateNodeData();
+    sideBarM.loadBind();
+};
+
+sideBarM.loadBind = function () {
+    mainSidebar.off('updatePath').on('updatePath', function(e, taregetPath){
+        $('[data-path="' + taregetPath + '"]').each(function () {
+            activeSideNode(this);
+        });
     });
-});
+    $("#sidebarHome, .sidebarSub").off("click").on("click", function(){
+        var path = $(this).attr("data-path");
+        activeSideNode(this);
+        ss.updatePath(path);
+    });
+};
 
-$("#sidebarHome, .sidebarSub").off("click").on("click", function(){
-    var path = $(this).attr("data-path");
-    activeSideNode(this);
-    ss.updatePath(path);
-})
-
-$("#sidebarHome").each(function () {
-    var tmp = getParentSideNode(this);
-    if (typeof tmp !== "undefined") {
-        var mainText = getSideNodeText(tmp);
-        var subText = getSideNodeText(this);
-        $(this).attr("data-path", mainText + "/" + subText)
-    }
-});
-
-$(".sidebarSub").each(function () {
-    var tmp = getParentSideNode(this);
-    if (typeof tmp !== "undefined") {
-        var mainText = getSideNodeText(tmp);
-        var subText = getSideNodeText(this);
-        $(this).attr("data-path", mainText + "/" + subText)
-    }
-});
+sideBarM.updateNodeData = function () {
+    $("#sidebarHome").each(function () {
+        var tmp = getParentSideNode(this);
+        if (typeof tmp !== "undefined") {
+            var mainText = getSideNodeText(tmp);
+            var subText = getSideNodeText(this);
+            $(this).attr("data-path", mainText + "/" + subText)
+        }
+    });
+    $(".sidebarSub").each(function () {
+        var tmp = getParentSideNode(this);
+        if (typeof tmp !== "undefined") {
+            var mainText = getSideNodeText(tmp);
+            var subText = getSideNodeText(this);
+            $(this).attr("data-path", mainText + "/" + subText)
+        }
+    });
+};
 
 function getParentSideNode(target) {
     var node;
@@ -37,7 +51,7 @@ function getParentSideNode(target) {
         tmp = $(tmp).siblings('a.nav-link.activable');
         node = tmp;
     }
-    return node 
+    return node;
 }
 
 function getSideNodeText(target) {

@@ -1,34 +1,20 @@
-"use strict" 
+"use strict"
 
 var mainHeader = $(".main-header");
 var mainSidebar = $(".main-sidebar");
-var contentWrapper = $(".content-wrapper")
+var contentWrapper = $(".content-wrapper");
 var preloader = $(".preloader");
 
-var d1 = $.Deferred();
-var d2 = $.Deferred();
-var d3 = $.Deferred();
+var headerDfrd = $.Deferred();
+var sideBarDfrd = $.Deferred();
+var wrapperDfrd = $.Deferred();
 
-mainHeader.load("pages/header.html", function() {
-    $.getScript("dist/js/header.js", function(){
-        d1.resolve();
-    });
-});
+$.getScript("dist/js/header.js");
+$.getScript("dist/js/sidebar.js");
+$.getScript("dist/js/wrapper.js");
 
-mainSidebar.load("pages/sidebar.html", function() {
-    $.getScript("dist/js/sidebar.js", function(){
-        d2.resolve();
-    });
-});
-
-contentWrapper.load("pages/wrapper.html", function() {
-    $.getScript("dist/js/wrapper.js", function(){
-        d3.resolve();
-    });
-});
-
-$.when(d1, d2, d3).then(function (){
-    loadTreeview();
+$.when(headerDfrd, sideBarDfrd, wrapperDfrd).then(function (){
+    ss.loadTreeview();
     ss.gDfrd.resolve();
 });
 
@@ -41,8 +27,20 @@ ss.closePreloader = function () {
     }
 }
 
-function loadTreeview() {
+ss.loadTreeview = function() {
     $('[data-widget="treeview"]').each(function () {
         $.fn.Treeview.call($(this), 'init');
     });
+}
+
+ss.loadCard = function() {
+    // Make the dashboard widgets sortable Using jquery UI
+    $('.connectedSortable').sortable({
+        placeholder: 'sort-highlight',
+        connectWith: '.connectedSortable',
+        handle: '.card-header, .nav-tabs',
+        forcePlaceholderSize: true,
+        zIndex: 999999
+    });
+    $('.connectedSortable .card-header').css('cursor', 'move');
 }

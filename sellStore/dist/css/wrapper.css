@@ -3,9 +3,8 @@
 }
 
 .content-wrapper .content-header {
-
-    height: calc((100vh - 114px) * 0.07016)!important;
-    line-height: calc((100vh - 114px) * 0.07016)!important;
+    height: 83px!important;
+    line-height: 91px!important;
     padding: 0px 0.5rem!important;
 }
 
@@ -14,5 +13,5 @@
 }
 
 .content-wrapper .content {
-    height: calc((100vh - 114px) * 0.92984)!important;
+    height: calc((100vh - 197px))!important;
 }

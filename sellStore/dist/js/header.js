@@ -1,23 +1,32 @@
-"use strict" 
+"use strict"
 
-mainHeader.off('updatePath').on('updatePath', function(e, targetPath){
-    $("#page-path").html("");
-    var pathList = targetPath.split('/');
-    var fullPath;
-    for (var i in pathList) {
-        var path = pathList[i];
-        var item = $("<li/>", {
-            class: "breadcrumb-item"
-        }).append(path);
-        $("#page-path").append(item);
-        if (path === ss.currentPage) {
-            item.addClass("active");
-        }
-    }
+var headerM = {};
+
+mainHeader.load("pages/header.html", function() {
+    headerM.loadBind();
+    headerDfrd.resolve();
 });
 
-mainHeader.find(".home").each(function () {
-    $(this).off("click").on("click", function() {
-        ss.updatePath(ss.home)
+headerM.loadBind = function() {
+    mainHeader.find(".home").each(function () {
+        $(this).off("click").on("click", function() {
+            ss.updatePath(ss.home)
+        });
     });
-});
+
+    mainHeader.off('updatePath').on('updatePath', function(e, targetPath){
+        $("#page-path").html("");
+        var pathList = targetPath.split('/');
+        var fullPath;
+        for (var i in pathList) {
+            var path = pathList[i];
+            var item = $("<li/>", {
+                class: "breadcrumb-item"
+            }).append(path);
+            $("#page-path").append(item);
+            if (path === ss.currentPage) {
+                item.addClass("active");
+            }
+        }
+    });
+};
