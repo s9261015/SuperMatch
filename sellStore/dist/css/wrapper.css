@@ -15,3 +15,12 @@
 .content-wrapper .content {
     height: calc((100vh - 197px))!important;
 }
+
+.content-wrapper .content #overview-event-table {
+	max-height: 447px;
+}
+
+.content-wrapper .content #overview-event-table_wrapper {
+	min-height: 540px;
+	max-height: 540px;
+}

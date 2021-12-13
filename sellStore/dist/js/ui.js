@@ -28,9 +28,7 @@ ss.closePreloader = function () {
 }
 
 ss.loadTreeview = function() {
-    $('[data-widget="treeview"]').each(function () {
-        $.fn.Treeview.call($(this), 'init');
-    });
+    $.fn.Treeview.call($('[data-widget="treeview"]'), "init");
 }
 
 ss.loadCard = function() {

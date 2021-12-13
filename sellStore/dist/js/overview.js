@@ -9,11 +9,21 @@ wrapperM.content.load("pages/overview.html", function() {
 
 overviewM.load = function() {
     ss.loadCard();
+    overviewM.loadBind();
     overviewM.loadChart();
     overviewM.loadEvent();
 };
 
-overviewM.loadChart = function (){
+overviewM.loadBind = function () {
+    wrapperM.content.find(".small-box-footer").off("click").on("click", function(){
+        var path = $(this).attr('data-path');
+        if (typeof path === "string") {
+            ss.updatePath(path);
+        }
+    });
+}
+
+overviewM.loadChart = function () {
     // 頁務開發 chart
     var areaChartData = {
       labels  : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -63,10 +73,37 @@ overviewM.loadChart = function (){
 };
 
 overviewM.loadEvent = function() {
-    $("#example1").DataTable({
+    var data = [];
+    for (var i = 0; i < 50; i++) {
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date + ' ' + time;
+        var tmp = [dateTime, "User" + i.toString(), "Do something" + i.toString()];
+        data.push(tmp);
+    }
+    $("#overview-event-table").DataTable({
         "responsive": true,
         "lengthChange": false,
         "autoWidth": false,
-        "pageLength": 8
-    }).appendTo('#example1_wrapper .col-md-6:eq(0)');
+        "pageLength": 8,
+        "columnDefs": [
+            {
+                "targets": 0,
+                "title": "Date",
+                "width": "20%"
+            },
+            {
+                "targets": 1,
+                "title": "Name",
+                "width": "20%"
+            },
+            {
+                "targets": 2,
+                "title": "Event",
+                "width": "60%"
+            }
+        ],
+        "data": data
+    });
 };

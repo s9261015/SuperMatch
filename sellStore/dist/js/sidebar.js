@@ -14,14 +14,16 @@ sideBarM.load = function () {
 
 sideBarM.loadBind = function () {
     mainSidebar.off('updatePath').on('updatePath', function(e, taregetPath){
-        $('[data-path="' + taregetPath + '"]').each(function () {
+        mainSidebar.find('[data-path="' + taregetPath + '"]').each(function () {
             activeSideNode(this);
         });
     });
     $("#sidebarHome, .sidebarSub").off("click").on("click", function(){
         var path = $(this).attr("data-path");
-        activeSideNode(this);
-        ss.updatePath(path);
+        if (typeof path === "string") {
+            activeSideNode(this);
+            ss.updatePath(path);
+        }
     });
 };
 
@@ -70,6 +72,9 @@ function activeSideNode(target) {
             var tmp = getParentSideNode(this);
             if (typeof tmp !== "undefined") {
                 $(tmp).addClass("active");
+                if (!$(tmp).parent().hasClass("menu-open")) {
+                    $(tmp).trigger("click");
+                }
             }
             $(target).addClass("active");
         } else {

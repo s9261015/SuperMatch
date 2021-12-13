@@ -3,7 +3,11 @@
 var wrapperM = {};
 
 wrapperM.contentJsUrls = {
-    "Dashboard/Overview": "dist/js/overview.js"
+    "Dashboard/Overview": "dist/js/overview.js",
+    "業務開發/賣家開發": "dist/js/sellerBus.js",
+    "業務開發/買家開發": "dist/js/buyerBus.js",
+    "人員管理/會員管理": "dist/js/members.js",
+    "物件管理/全部物件": "dist/js/items.js"
 };
 
 contentWrapper.load("pages/wrapper.html", function() {
