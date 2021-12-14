@@ -1,15 +1,9 @@
 "use strict"
 
 var ss = this;
-ss.gDfrd = $.Deferred();
 ss.home = "Dashboard/Overview"
 
 $.getScript("dist/js/ui.js");
-
-$.when(ss.gDfrd).then(function (){
-    ss.updatePath(ss.home);
-    ss.closePreloader();
-})
 
 ss.trigger = function (eventName, eventParams) {
     mainHeader.trigger(eventName, eventParams);

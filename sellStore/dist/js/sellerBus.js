@@ -4,17 +4,16 @@ var sellerBusM = {}
 
 wrapperM.content.load("pages/sellerBus.html", function() {
     sellerBusM.load();
-    wrapperM.subDfrd.resolve();
 });
 
 sellerBusM.load = function() {
+	sellerBusM.loadTable();
     sellerBusM.loadBind();
-    sellerBusM.loadTable();
 };
 
 sellerBusM.loadBind = function () {
 
-}
+};
 
 sellerBusM.loadTable = function() {
     var data = [
@@ -116,5 +115,8 @@ sellerBusM.loadTable = function() {
             }
         ],
         "data": data
+    });
+    $("#seller-bus-event-table_wrapper > div:nth-child(1) > div:nth-child(1)").load("pages/sellerBusTableBtn.html", function(){
+    	wrapperM.subDfrd.resolve();
     });
 };

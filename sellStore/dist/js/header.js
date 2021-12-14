@@ -3,9 +3,14 @@
 var headerM = {};
 
 mainHeader.load("pages/header.html", function() {
-    headerM.loadBind();
+    headerM.load();
+    mainHeader.trigger("updatePath", [ss.home]);
     headerDfrd.resolve();
 });
+
+headerM.load = function() {
+    headerM.loadBind();
+};
 
 headerM.loadBind = function() {
     mainHeader.find(".home").each(function () {
@@ -14,7 +19,7 @@ headerM.loadBind = function() {
         });
     });
 
-    mainHeader.off('updatePath').on('updatePath', function(e, targetPath){
+    mainHeader.off("updatePath").on("updatePath", function(e, targetPath){
         $("#page-path").html("");
         var pathList = targetPath.split('/');
         var fullPath;

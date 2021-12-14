@@ -15,7 +15,7 @@ $.getScript("dist/js/wrapper.js");
 
 $.when(headerDfrd, sideBarDfrd, wrapperDfrd).then(function (){
     ss.loadTreeview();
-    ss.gDfrd.resolve();
+    ss.closePreloader();
 });
 
 ss.closePreloader = function () {
@@ -25,11 +25,11 @@ ss.closePreloader = function () {
             preloader.children().hide();
         }, 200);
     }
-}
+};
 
 ss.loadTreeview = function() {
     $.fn.Treeview.call($('[data-widget="treeview"]'), "init");
-}
+};
 
 ss.loadCard = function() {
     // Make the dashboard widgets sortable Using jquery UI
@@ -41,4 +41,4 @@ ss.loadCard = function() {
         zIndex: 999999
     });
     $('.connectedSortable .card-header').css('cursor', 'move');
-}
+};

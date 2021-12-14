@@ -4,6 +4,7 @@ var sideBarM = {};
 
 mainSidebar.load("pages/sidebar.html", function() {
     sideBarM.load();
+    mainSidebar.trigger("updatePath", [ss.home]);
     sideBarDfrd.resolve();
 });
 
