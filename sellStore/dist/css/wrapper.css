@@ -36,26 +36,25 @@
 }
 
 .content-wrapper #overviewBusChart, .content-wrapper #overview-event-table_wrapper {
-    width: 100%;
     height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px)) !important;
     min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px)) !important;
     max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px)) !important;
 }
 
 .content-wrapper #overview-event-table {
-    width: 100%;
-    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px)) !important;
-    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px)) !important;
-    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px)) !important;
+    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
+    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
+    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
 }
 
-
-
-/*.content-wrapper .content #overview-event-table {
-    max-height: 447px;
+.content-wrapper #seller-bus-table_wrapper, .content-wrapper #buyer-bus-table_wrapper, .content-wrapper #members-table_wrapper, .content-wrapper #items-table_wrapper {
+    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px)) !important;
+    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px)) !important;
+    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px)) !important;
 }
 
-.content-wrapper .content #overview-event-table_wrapper {
-    min-height: 540px;
-    max-height: 540px;
-}*/
+.content-wrapper #seller-bus-table, .content-wrapper #buyer-bus-table, .content-wrapper #members-table, .content-wrapper #items-table {
+    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
+    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
+    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)) !important;
+}

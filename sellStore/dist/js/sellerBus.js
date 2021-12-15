@@ -7,12 +7,17 @@ wrapperM.content.load("pages/sellerBus.html", function() {
 });
 
 sellerBusM.load = function() {
-	sellerBusM.loadTable();
+    sellerBusM.loadComponent();
     sellerBusM.loadBind();
 };
 
-sellerBusM.loadBind = function () {
-
+sellerBusM.loadComponent = function() {
+    sellerBusM.loadTable();
+    $("#seller-bus-table_wrapper > div:nth-child(1) > div:nth-child(1)").load("pages/sellerBusTableBtn.html", function(){
+        $("#seller-bus-add-dialog").load("pages/sellerBusAdd.html", function(){
+            wrapperM.subDfrd.resolve();
+        });
+    });
 };
 
 sellerBusM.loadTable = function() {
@@ -31,11 +36,12 @@ sellerBusM.loadTable = function() {
         ["12"," ", "2020-08-13<br>15:23:00", "無", "未聯絡", "未接", "自來客<br>(需求表)"," "," ", "呂12", "0989522767", "餐飲小吃", "新北市淡水區"," "," "," ", "未入帳"," ", "Teresa"],
         ["13"," ", "2020-08-13<br>15:22:00", "無", "未聯絡", "未接", "自來客<br>(需求表)"," "," ", "呂13", "0989522767", "餐飲小吃", "新北市淡水區"," "," "," ", "未入帳"," ", "Teresa"]
     ];
-    $("#seller-bus-event-table").DataTable({
+    $("#seller-bus-table").DataTable({
         "responsive": true,
         "lengthChange": false,
         "autoWidth": true,
         "pageLength": 10,
+        "scrollY": "calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px))",
         "columnDefs": [
             {
                 "targets": 0,
@@ -116,7 +122,8 @@ sellerBusM.loadTable = function() {
         ],
         "data": data
     });
-    $("#seller-bus-event-table_wrapper > div:nth-child(1) > div:nth-child(1)").load("pages/sellerBusTableBtn.html", function(){
-    	wrapperM.subDfrd.resolve();
-    });
+};
+
+sellerBusM.loadBind = function () {
+
 };

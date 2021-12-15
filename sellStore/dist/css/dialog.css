@@ -1,0 +1,15 @@
+#seller-bus-add-dialog {
+    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
+    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
+    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
+}
+
+/*.modal-dialog,
+.modal-content {
+    height: 80%;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}*/

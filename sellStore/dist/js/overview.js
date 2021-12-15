@@ -97,14 +97,17 @@ overviewM.loadEvent = function() {
             {
                 "targets": 1,
                 "title": "Name",
-                "width": "20%"
+                "width": "20%",
+                "orderable": false
             },
             {
                 "targets": 2,
                 "title": "Event",
-                "width": "60%"
+                "width": "60%",
+                "orderable": false
             }
         ],
+        "order": [[ 0, 'desc' ]],
         "data": data
     });
 };

@@ -7,12 +7,17 @@ wrapperM.content.load("pages/members.html", function() {
 });
 
 membersM.load = function() {
-    membersM.loadTable();
+    membersM.loadComponent();
     membersM.loadBind();
 };
 
-membersM.loadBind = function () {
-
+membersM.loadComponent = function() {
+    membersM.loadTable();
+    $("#members-table_wrapper > div:nth-child(1) > div:nth-child(1)").load("pages/membersTableBtn.html", function(){
+        $("#members-add-dialog").load("pages/membersAdd.html", function(){
+            wrapperM.subDfrd.resolve();
+        });
+    });
 };
 
 membersM.loadTable = function() {
@@ -31,11 +36,12 @@ membersM.loadTable = function() {
 		["12"," ", "U12345678", "abc", "rrrrrrr", "登入", "呂12", "男", "0989522767", "abc@gmail.com", " ", "2020-08-13<br>15:23:00", 0, 0, 0],
 		["13"," ", "U12345678", "abc", "rrrrrrr", "登入", "呂13", "男", "0989522767", "abc@gmail.com", " ", "2020-08-13<br>15:22:00", 0, 0, 0],
     ];
-    $("#members-bus-event-table").DataTable({
+    $("#members-table").DataTable({
         "responsive": true,
         "lengthChange": false,
         "autoWidth": true,
         "pageLength": 10,
+        "scrollY": "calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px))",
         "columnDefs": [
             {
                 "targets": 0,
@@ -100,7 +106,8 @@ membersM.loadTable = function() {
         ],
         "data": data
     });
-    $("#members-bus-event-table_wrapper > div:nth-child(1) > div:nth-child(1)").load("pages/membersTableBtn.html", function(){
-    	wrapperM.subDfrd.resolve();
-    });
+};
+
+membersM.loadBind = function () {
+
 };
