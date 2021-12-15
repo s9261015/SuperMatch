@@ -52,23 +52,23 @@ overviewM.loadChart = function () {
         },
       ]
     }
-    var barChartCanvas = $('#barChart').get(0).getContext('2d');
-    var barChartData = $.extend(true, {}, areaChartData);
+    var overviewBusChartCanvas = $('#overviewBusChart').get(0).getContext('2d');
+    var overviewBusChartData = $.extend(true, {}, areaChartData);
     var temp0 = areaChartData.datasets[0];
     var temp1 = areaChartData.datasets[1];
-    barChartData.datasets[0] = temp1;
-    barChartData.datasets[1] = temp0;
+    overviewBusChartData.datasets[0] = temp1;
+    overviewBusChartData.datasets[1] = temp0;
 
-    var barChartOptions = {
+    var overviewBusChartOptions = {
       responsive              : true,
       maintainAspectRatio     : false,
       datasetFill             : false
     };
 
-    new Chart(barChartCanvas, {
+    new Chart(overviewBusChartCanvas, {
       type: 'bar',
-      data: barChartData,
-      options: barChartOptions
+      data: overviewBusChartData,
+      options: overviewBusChartOptions
     });
 };
 
@@ -85,8 +85,9 @@ overviewM.loadEvent = function() {
     $("#overview-event-table").DataTable({
         "responsive": true,
         "lengthChange": false,
-        "autoWidth": false,
-        "pageLength": 8,
+        "autoWidth": true,
+        "pageLength": 10,
+        "scrollY": "calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)",
         "columnDefs": [
             {
                 "targets": 0,
