@@ -3,6 +3,7 @@
     min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
     max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
     padding-bottom: 0px !important;
+    background-color: #ffffdd!important;
 }
 
 .content-wrapper .content-progress {
@@ -18,7 +19,11 @@
 
 .content-wrapper .content-header {
     line-height: 5rem!important;
-    padding: 1rem 0.5rem!important;
+    padding: 0.625rem 0.5rem!important;
+    background-color: #343a40;
+    color: #c2c7d0;
+    font-family: fantasy;
+    margin-bottom: 1rem !important;
 }
 
 .content-wrapper .content-header .container-fluid {
@@ -32,7 +37,8 @@
 }
 
 .content-wrapper .small-box {
-    margin-bottom: 1.25rem !important;
+    /*margin: 1rem 0rem !important;*/
+    margin-bottom: 1rem !important;
 }
 
 .content-wrapper #overviewBusChart, .content-wrapper #overview-event-table_wrapper {

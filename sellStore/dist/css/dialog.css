@@ -1,15 +1,51 @@
-#seller-bus-add-dialog {
-    height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
-    min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
-    max-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px)) !important;
+#seller-bus-add-dialog .modal-dialog {
+    top: calc(calc(10vh - 3.5rem) / 2)!important;
 }
 
-/*.modal-dialog,
-.modal-content {
-    height: 80%;
+#seller-bus-add-dialog .modal-dialog, #seller-bus-add-dialog .modal-content {
+    max-height: 90vh;
 }
 
-.modal-body {
-    max-height: calc(100vh - 210px);
+#seller-bus-add-dialog .modal-body {
+    max-height: calc(90vh - calc(4.25rem + 1px) - calc(4.2rem + 3.4px))!important;
     overflow-y: auto;
-}*/
+}
+
+#buyer-bus-add-dialog .modal-dialog {
+    top: calc(calc(10vh - 3.5rem) / 2)!important;
+}
+
+#buyer-bus-add-dialog .modal-dialog, #buyer-bus-add-dialog .modal-content {
+    max-height: 90vh;
+}
+
+#buyer-bus-add-dialog .modal-body {
+    max-height: calc(90vh - calc(4.25rem + 1px) - calc(4.2rem + 3.4px))!important;
+    overflow-y: auto;
+}
+
+#members-add-dialog .modal-dialog {
+    top: calc(calc(10vh - 3.5rem) / 2)!important;
+}
+
+#members-add-dialog .modal-dialog, #members-add-dialog .modal-content {
+    max-height: 90vh;
+}
+
+#members-add-dialog .modal-body {
+    max-height: calc(90vh - calc(4.25rem + 1px) - calc(4.2rem + 3.4px))!important;
+    overflow-y: auto;
+}
+
+#items-add-dialog .modal-dialog {
+    top: calc(calc(10vh - 3.5rem) / 2)!important;
+}
+
+#items-add-dialog .modal-dialog, #items-add-dialog .modal-content {
+    max-height: 90vh;
+}
+
+#items-add-dialog .modal-body {
+    max-height: calc(90vh - calc(4.25rem + 1px) - calc(4.2rem + 3.4px))!important;
+    overflow-y: auto;
+}
