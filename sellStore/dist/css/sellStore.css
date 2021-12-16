@@ -1,0 +1,71 @@
+.content-wrapper {
+  min-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px)) !important;
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px)) !important;
+  padding-bottom: 0px !important;
+  background-color: #ffffdd !important;
+}
+
+.content-wrapper .gap {
+  width: 100%;
+  height: 1rem;
+}
+
+.content-wrapper .content-progress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.content-wrapper .content-progress .content-progress-bar {
+  width: 0%;
+  height: 0.375rem !important;
+  background-color: #007bff;
+}
+
+.content-wrapper .content-header {
+  line-height: 5.76rem !important;
+  background-color: #343a40;
+  color: #c2c7d0;
+  font-family: fantasy;
+  padding: 0px 0.5rem !important;
+}
+
+.content-wrapper .content-header h1 {
+  font-size: 1.6rem !important;
+}
+
+.content-wrapper .content-header .container-fluid {
+  display: inline-block;
+}
+
+.content-wrapper .content {
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem) !important;
+}
+
+.content-wrapper .small-box {
+  margin-bottom: 1rem !important;
+  height: calc(5.14rem + 30px + 1.5rem + 6px) !important;
+}
+
+#overviewBusChart, #overview-event-table_wrapper {
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - (5.14rem + 30px + 1.5rem + 6px) - (2.82rem + 1px) - 2.5rem - 3rem) !important;
+  min-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - (5.14rem + 30px + 1.5rem + 6px) - (2.82rem + 1px) - 2.5rem - 3rem) !important;
+  max-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - (5.14rem + 30px + 1.5rem + 6px) - (2.82rem + 1px) - 2.5rem - 3rem) !important;
+}
+
+#overview-event-table_wrapper .dataTables_scrollBody {
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - (5.14rem + 30px + 1.5rem + 6px) - (2.82rem + 1px) - 2.5rem - 3rem - (2.3125rem + 2px) - (3rem + 9px) - 2.35rem) !important;
+  max-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - (5.14rem + 30px + 1.5rem + 6px) - (2.82rem + 1px) - 2.5rem - 3rem - (2.3125rem + 2px) - (3rem + 9px) - 2.35rem) !important;
+}
+
+#seller-bus-table_wrapper, #buyer-bus-table_wrapper, #members-table_wrapper, #items-table_wrapper {
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - 2.5rem - 2rem) !important;
+  min-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - 2.5rem - 2rem) !important;
+  max-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - 2.5rem - 2rem) !important;
+}
+
+#seller-bus-table_wrapper .dataTables_scrollBody, #buyer-bus-table_wrapper .dataTables_scrollBody, #members-table_wrapper .dataTables_scrollBody, #items-table_wrapper .dataTables_scrollBody {
+  height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - 2.5rem - 2rem - (2.3125rem + 2px) - (3rem + 9px) - 2.35rem) !important;
+  max-height: calc(100vh - (3.5rem + 1px) - (3.5rem + 1px) - 0.375rem - 5.76rem - 2.5rem - 2rem - (2.3125rem + 2px) - (3rem + 9px) - 2.35rem) !important;
+}
+
+/*# sourceMappingURL=sellStore.css.map */

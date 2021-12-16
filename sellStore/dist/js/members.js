@@ -40,8 +40,8 @@ membersM.loadTable = function() {
         "responsive": true,
         "lengthChange": false,
         "autoWidth": true,
-        "pageLength": 10,
-        "scrollY": "calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(10.5rem + 2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px))",
+        "pageLength": 20,
+        "scrollY": "100vh",
         "columnDefs": [
             {
                 "targets": 0,

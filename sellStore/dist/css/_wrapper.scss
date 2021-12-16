@@ -1,0 +1,93 @@
+$gap: 1rem;
+$headerH: calc(3.5rem + 1px); // header height
+$footerH: calc(3.5rem + 1px); // footer height
+$wrapperH: calc(100vh - $headerH - $footerH); // wrapper height
+$wrapperProgH: 0.375rem; // wrapper progress bar height
+$wrapperTitle1: 1.6rem; // wrapper title font size
+$wrapperTitle2: calc($wrapperTitle1 * 1.2);  // wrapper title font height
+$wrapperTitle3: calc($wrapperTitle2 * 3); // wrapper title height
+$wrapperContentH: calc($wrapperH  - $wrapperProgH - $wrapperTitle3);
+$overviewSmallBox1: calc(5.14rem + 30px); // overview small box content height
+$overviewSmallBox2: calc(1.5rem + 6px); // overview small box more height
+$overviewSmallBox3: calc($overviewSmallBox1 + $overviewSmallBox2); // overview small box height
+$cardTitle1: 1.1rem; // card title font size
+$cardTitle2: calc($cardTitle1 * 1.2); // card title font height
+$cardTitle3: 1.5rem; // card title font padding(top, bottom)
+$cardTitle4: calc($cardTitle2 + $cardTitle3 + 1px); // card title height
+$cardBodyPadding: 2.5rem; // card body padding(top, bottom)
+$overviewEventTable1: calc($wrapperContentH - $overviewSmallBox3 - $cardTitle4 - $cardBodyPadding - calc($gap * 3)); // overview event table wrapper height
+$overviewEventTable2: calc(2.3125rem + 2px); // overview event table wrapper filter height
+$overviewEventTable3: calc(3rem + 9px); // overview event table header height
+$overviewEventTable4: 2.35rem; // overview event table footer height
+$overviewEventTable5: calc($overviewEventTable1 - $overviewEventTable2 - $overviewEventTable3 - $overviewEventTable4); // overview event table content height
+$sellerBusTable1: calc($wrapperContentH - $cardBodyPadding - calc($gap * 2)); // seller business table wrapper height
+$sellerBusTable2: calc($sellerBusTable1 - $overviewEventTable2 - $overviewEventTable3 - $overviewEventTable4); // overview event table content height
+
+.content-wrapper {
+    min-height: $wrapperH !important;
+    height: $wrapperH !important;
+    padding-bottom: 0px !important;
+    background-color: #ffffdd!important;
+}
+
+.content-wrapper .gap {
+    width: 100%;
+    height: $gap;
+}
+.content-wrapper .content-progress {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.content-wrapper .content-progress .content-progress-bar {
+    width: 0%;
+    height: $wrapperProgH !important;
+    background-color: #007bff;
+}
+
+.content-wrapper .content-header {
+    line-height: $wrapperTitle3 !important;
+    background-color: #343a40;
+    color: #c2c7d0;
+    font-family: fantasy;
+    padding: 0px 0.5rem !important;
+}
+
+.content-wrapper .content-header h1 {
+    font-size: $wrapperTitle1 !important;
+}
+
+.content-wrapper .content-header .container-fluid {
+    display: inline-block;
+}
+
+.content-wrapper .content {
+    height: $wrapperContentH !important;
+}
+
+.content-wrapper .small-box {
+    margin-bottom: $gap !important;
+    height: $overviewSmallBox3 !important;
+}
+
+#overviewBusChart, #overview-event-table_wrapper {
+    height: $overviewEventTable1 !important;
+    min-height: $overviewEventTable1 !important;
+    max-height: $overviewEventTable1 !important;
+}
+
+#overview-event-table_wrapper .dataTables_scrollBody {
+    height: $overviewEventTable5 !important;
+    max-height: $overviewEventTable5 !important;
+}
+
+#seller-bus-table_wrapper, #buyer-bus-table_wrapper, #members-table_wrapper, #items-table_wrapper {
+    height: $sellerBusTable1 !important;
+    min-height: $sellerBusTable1 !important;
+    max-height: $sellerBusTable1 !important;
+}
+
+#seller-bus-table_wrapper .dataTables_scrollBody, #buyer-bus-table_wrapper .dataTables_scrollBody, #members-table_wrapper .dataTables_scrollBody, #items-table_wrapper .dataTables_scrollBody {
+    height: $sellerBusTable2 !important;
+    max-height: $sellerBusTable2 !important;
+}

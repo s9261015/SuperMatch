@@ -86,8 +86,8 @@ overviewM.loadEvent = function() {
         "responsive": true,
         "lengthChange": false,
         "autoWidth": true,
-        "pageLength": 10,
-        "scrollY": "calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px) - calc(7rem + 2px) - calc(7.89rem + 36px) - calc(6.32rem + 1.2px) - calc(2.3125rem + 18px) - calc(2.25rem + 5.2px) - calc(2.25rem + 3.2px)",
+        "pageLength": 15,
+        "scrollY": "100vh",
         "columnDefs": [
             {
                 "targets": 0,
