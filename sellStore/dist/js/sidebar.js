@@ -19,6 +19,11 @@ sideBarM.loadBind = function () {
             activeSideNode(this);
         });
     });
+    var brand = $(".brand-link img, .brand-link span")
+    brand.css("cursor", "pointer");
+    brand.off("click").on("click", function(){
+        ss.updatePath(ss.home);
+    });
     $("#sidebarHome, .sidebarSub").off("click").on("click", function(){
         var path = $(this).attr("data-path");
         if (typeof path === "string") {

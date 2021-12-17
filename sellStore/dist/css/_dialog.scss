@@ -49,3 +49,23 @@
     max-height: calc(90vh - calc(4.25rem + 1px) - calc(4.2rem + 3.4px))!important;
     overflow-y: auto;
 }
+
+.dropdown-list {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-list button {
+    color: #6c757d;
+    border-color: #6c757d;
+    min-width: $dropdown1;
+}
+
+.dropdown-list .dropdown-menu {
+    text-align: center;
+}
+
+.modal-body .block-name {
+    font-size: 1.1rem;
+    line-height: 3;
+}

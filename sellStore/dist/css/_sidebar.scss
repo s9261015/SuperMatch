@@ -1,0 +1,16 @@
+.main-sidebar .brand-link {
+	padding: 1rem 0.5rem !important;
+}
+
+.main-sidebar .sidebar {
+	margin-top: calc($headerH + $wrapperProgH) !important;
+}
+
+.sidebar .user-panel {
+    padding: $sidebarUser2 0rem!important;
+    margin-bottom: calc(1rem - 1px);
+}
+
+.sidebar .nav-item .treeview-padding-1 p {
+    padding-left: 33px;
+}
